@@ -1,1 +1,13 @@
 /* Desenvolva a estilização da sua página aqui */
+@import url("./reset.css");
+@import url("./globalStyles.css");
+@import url("./text.css");
+@import url("./components.css");
+@import url("./header.css");
+@import url("./heroContainer.css");
+@import url("./moneyContainer.css");
+@import url("./modal.css");
+
+
+
+

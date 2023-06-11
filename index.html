@@ -1,26 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Control Finance</title>
-    <link
-      rel="shortcut icon"
-      href="./src/assets/favicon.ico"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="Control Finance - Seu controle financeiro"
-    />
-    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
-    <link rel="stylesheet" href="./src/styles/index.css" />
-  </head>
-  <body>
-    <main id="app"></main>
-    <script src="./src/scripts/modal.js"></script>
-    <script src="./src/scripts/valuesData.js"></script>
-    <script src="./src/scripts/index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Finance</title>
+  <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Control Finance - Seu controle financeiro" />
+  <link rel="stylesheet" href="./src/styles/index.css" />
+</head>
+
+<body>
+  <header class="header__container">
+    <h1 class="titleOne-bold"><span class="header__title-modifier">Control</span> Finance</h1>
+    <button class="button__primary-default header__button">Registrar novo valor</button>
+  </header>
+ 
+  <main id="app">
+    <div class="container">
+    <section class="hero__container">
+      <div class="hero__content">
+        <h2 class="titleTwo-medium hero__h2" >Resumo financeiro</h2>
+        <div class="hero__button">
+          <button class="button__outline-default btnValue" id="btnAll" >Todos</button>
+          <button class="button__outline-default btnValue" id="btnEntry" value="0">Entradas</button>
+          <button class="button__outline-default btnValue" id="btnLeave" value="1">Saídas</button>
+        </div>
+      </div>
+      <div class="hero__results">
+        <p class="textOne-medium">Soma dos valores</p>
+        <div id="sumMoney"></div>
+      </div>
+    </section>
+    <section >
+      <ul class="money__container" id="moneyList">
+      </ul>
+      <div class="msg__container" id="msgValue">
+        <h2 class="titleTwo-medium">Nenhum valor cadastrado</h2>
+        <p class="textOne-medium">Register novo valor</p>
+      </div>
+    </section>
+    <div class="container__modal">
+      <dialog id="modal">
+        <div class="modal__container">
+          <div class="modal__header">
+            <h2 class="titleTwo-medium">Registro de valor</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="closeModal" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </div>
+          <p class="textOne-medium">Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
+          <form action="" class="modal__form">
+            <label for="" class="titleTwo-medium">Valor</label>
+          </form>    
+          
+          <form action="" class="input__container" >
+            <span>R$</span>
+            <input type="number" name="money" id="inputMoney" class="input__number" required>
+          </form>
+          <h2 class="titleTwo-medium">Tipo de valor</h2>
+          <div class="value__type">
+            <input checked  hidden type="radio" name="categoryID" id="entry" value="0">
+            <label for="entry" class="input__radio"  value="0">Entrada</label>
+            <input  hidden type="radio" name="categoryID" id="leave" value="1">
+            <label for="leave" class="input__radio" value="1">saida</label>
+          </div>
+          <div class="dialog__hero">
+            <button class="button__greylow-default dialog__button" id="btnCancel">Cancelar</button>
+            <button class="button__primary-default dialog__button" id="btnInsert">Inserir valor</button>
+          </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+</main>
+<script type="module" src="./src/scripts/modal.js"></script>
+<script type="module" src="./src/scripts/valuesData.js"></script>
+<script type="module" src="./src/scripts/helpers.js"></script>
+<script type="module" src="./src/scripts/main.js"></script>
+</body>
 </html>

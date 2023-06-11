@@ -1,0 +1,52 @@
+
+.msg__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0 ;
+    margin: 0 16px;
+    border-radius: 8px;
+    border: 2px solid var(--color-grey-3);
+    border-style: dotted;
+}
+.money__container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 0 20px;
+    gap: 20px;
+}
+.money__investments{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    font-weight: var(--font-weight-1);
+    border: 1px solid var(--color-grey-3);
+    border-radius: var(--radius-1);
+    height: 2.8rem;
+}
+.money__hero{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}     
+@media (min-width: 1000px) {
+    .money__investments{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 1%;
+    }
+    .msg__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 20px 0;
+        border-radius: 8px;
+        border: 2px solid var(--color-grey-3);
+        border-style: dotted;
+    }
+}

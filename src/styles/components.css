@@ -1,0 +1,58 @@
+.button__primary-default,.button__greylow-default,.button__outline-default {
+    height: 2rem;
+    padding-inline: 0.875rem;
+    border: none;
+    border-radius: var(--radius-1);
+    font-weight: var(--font-weight-1);
+    }
+
+
+.button__primary-default{
+    background-color: var(--color-brand-1);
+    color: var(--color-brand-3);
+}
+.button__primary-default:hover{
+    background-color: var(--color-brand-2);
+}
+
+.button__greylow-default:hover{
+    background-color:var( --color-grey-3) ;
+    color: var(--color-grey-1);
+}
+
+.button__outline-default{
+    border: 1px solid var(--color-grey-3);
+    background-color: var(--color-brand-5);
+}
+.button__outline-default:hover{
+    border: 2px solid var(--color-brand-2);
+    color: var(--color-brand-2);
+}
+.button__outline-default:active{
+    border-color: var(--color-brand-2);
+    color: var(--color-brand-2);
+}
+
+.input__container{
+    border: 1px solid var(--color-grey-1);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 1rem;
+}
+.input__number{
+    width: 100%;
+    padding: 1px 0 0 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.trash-icon:hover{
+   color: var(--color-brand-2);
+} 
+
+.button__active{
+    border: 2px solid var(--color-brand-2);
+    color: var(--color-brand-2);
+}
