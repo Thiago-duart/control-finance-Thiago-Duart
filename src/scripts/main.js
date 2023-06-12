@@ -43,7 +43,8 @@ export function insertValue(arrayValues) {
     trashIcons.forEach((icon) => {
       icon.addEventListener("click", deleteElement);
     });
-
+    msgValueRegistered()
+    SumMoney(array)
     return array;
   });
 }
